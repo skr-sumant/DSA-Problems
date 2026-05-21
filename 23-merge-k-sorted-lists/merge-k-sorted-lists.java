@@ -43,9 +43,9 @@ class Solution {
 
     public ListNode mergeKLists(ListNode[] lists) {
         if(lists.length == 0 || lists == null ) return null;
-        ListNode x = null;
+        ListNode x = lists[0];
 
-        for(int i=0; i<lists.length;i++){
+        for(int i=1; i<lists.length;i++){
             x = mergeTwoLists(x,lists[i]);
         }
         return x;
